@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Account for fixed header */
+.App>*:not(header) {
+  margin-top: 70px;
+}
+
+/* Add some demo content styling */
+.content-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-section h1 {
+  color: #002A53;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.content-section p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    padding: 2rem 1rem;
+  }
+
+  .content-section h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,1537 @@
+/* ===================================
+   BASE STYLES - Desktop First Approach
+   =================================== */
+
+.preschool-hero {
+  background: white;
+  padding: 60px 40px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preschool-container {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 0 20px;
+}
+
+/* ===================================
+   LEFT SIDE - CONTENT SECTION
+   =================================== */
+
+.preschool-content {
+  flex: 0 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sherwood-logo {
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  width: 166px;
+  height: 156px;
+  display: block;
+  object-fit: contain;
+}
+
+.preschool-heading {
+  color: #000;
+  font-family: "Noto Serif", serif;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 15px 0;
+  white-space: nowrap;
+}
+
+.preschool-description {
+  color: #000;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 496px;
+}
+
+/* ===================================
+   RIGHT SIDE - VISUAL SECTION
+   =================================== */
+
+.preschool-visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 400px;
+}
+
+.classroom-image {
+  position: relative;
+  height: 396px;
+  border-radius: 35px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.classroom-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 35px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.squirrel-mascot {
+  position: absolute;
+  bottom: -10px;
+  left: -30px;
+  z-index: 3;
+  transform: rotate(18.368deg);
+  pointer-events: none;
+}
+
+.squirrel-image {
+  width: 160px;
+  height: 172px;
+  aspect-ratio: 55/59;
+  display: block;
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS
+   =================================== */
+
+/* Large Desktop (1200px - 1400px) - Maintain same alignment */
+@media (max-width: 1400px) and (min-width: 1200px) {
+  .preschool-container {
+    gap: 50px;
+  }
+
+  .preschool-description {
+    font-size: 20px;
+  }
+}
+
+/* Desktop to Laptop (1024px - 1199px) - Maintain row layout with consistent alignment */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .preschool-hero {
+    padding: 50px 30px;
+  }
+
+  .preschool-container {
+    gap: 40px;
+  }
+
+  .logo-image {
+    width: 140px;
+    height: 132px;
+  }
+
+  .preschool-heading {
+    font-size: 38px;
+  }
+
+  .preschool-description {
+    font-size: 18px;
+    max-width: 420px;
+  }
+
+  .classroom-image {
+    width: 480px;
+    height: 334px;
+  }
+
+  .squirrel-image {
+    width: 130px;
+    height: 140px;
+  }
+
+  .squirrel-mascot {
+    left: -25px;
+    bottom: -8px;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) - Still row layout with adjusted spacing */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .preschool-hero {
+    padding: 40px 25px;
+  }
+
+  .preschool-container {
+    gap: 35px;
+  }
+
+  .preschool-content {
+    max-width: 380px;
+  }
+
+  .logo-image {
+    width: 120px;
+    height: 113px;
+  }
+
+  .preschool-heading {
+    font-size: 32px;
+    white-space: normal;
+  }
+
+  .preschool-description {
+    font-size: 16px;
+    max-width: 350px;
+  }
+
+  .preschool-visual {
+    min-height: 320px;
+  }
+
+  .classroom-image {
+    width: 400px;
+    height: 278px;
+  }
+
+  .squirrel-image {
+    width: 110px;
+    height: 118px;
+  }
+
+  .squirrel-mascot {
+    left: -22px;
+    bottom: -8px;
+  }
+}
+
+/* Tablet Portrait (600px - 767px) - Transition to column layout */
+@media (max-width: 767px) and (min-width: 600px) {
+  .preschool-hero {
+    padding: 35px 20px;
+  }
+
+  .preschool-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .preschool-content {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sherwood-logo {
+    margin-bottom: 15px;
+  }
+
+  .logo-image {
+    width: 110px;
+    height: 104px;
+  }
+
+  .preschool-heading {
+    font-size: 30px;
+    white-space: normal;
+  }
+
+  .preschool-description {
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .preschool-visual {
+    width: 100%;
+    max-width: 550px;
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .classroom-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 570/396;
+  }
+
+  .squirrel-image {
+    width: 110px;
+    height: 118px;
+  }
+
+  .squirrel-mascot {
+    bottom: -8px;
+    left: -22px;
+  }
+}
+
+/* Mobile Large (480px - 599px) - Column layout with centered alignment */
+@media (max-width: 599px) and (min-width: 480px) {
+  .preschool-hero {
+    padding: 30px 15px;
+  }
+
+  .preschool-container {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .preschool-content {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-image {
+    width: 95px;
+    height: 90px;
+  }
+
+  .preschool-heading {
+    font-size: 26px;
+    white-space: normal;
+  }
+
+  .preschool-description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .preschool-visual {
+    width: 100%;
+    max-width: 450px;
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .classroom-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 570/396;
+    border-radius: 28px;
+  }
+
+  .classroom-image img {
+    border-radius: 28px;
+  }
+
+  .squirrel-image {
+    width: 90px;
+    height: 97px;
+  }
+
+  .squirrel-mascot {
+    bottom: -6px;
+    left: -18px;
+  }
+}
+
+/* Mobile Medium (360px - 479px) - Compact column layout */
+@media (max-width: 479px) and (min-width: 360px) {
+  .preschool-hero {
+    padding: 25px 12px;
+  }
+
+  .preschool-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .preschool-content {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sherwood-logo {
+    margin-bottom: 12px;
+  }
+
+  .logo-image {
+    width: 85px;
+    height: 80px;
+  }
+
+  .preschool-heading {
+    font-size: 24px;
+    white-space: normal;
+    margin-bottom: 12px;
+  }
+
+  .preschool-description {
+    font-size: 13px;
+    max-width: 100%;
+    line-height: 1.6;
+  }
+
+  .preschool-visual {
+    width: 100%;
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .classroom-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 570/396;
+    border-radius: 24px;
+  }
+
+  .classroom-image img {
+    border-radius: 24px;
+    padding: 8px;
+  }
+
+  .squirrel-image {
+    width: 80px;
+    height: 86px;
+  }
+
+  .squirrel-mascot {
+    bottom: -5px;
+    left: -15px;
+  }
+}
+
+/* Mobile Small (below 360px) - Minimal layout */
+@media (max-width: 359px) {
+  .preschool-hero {
+    padding: 20px 10px;
+  }
+
+  .preschool-container {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .preschool-content {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-image {
+    width: 75px;
+    height: 71px;
+  }
+
+  .preschool-heading {
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  .preschool-description {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .classroom-image {
+    border-radius: 20px;
+  }
+
+  .classroom-image img {
+    border-radius: 20px;
+    padding: 7px;
+  }
+
+  .squirrel-image {
+    width: 65px;
+    height: 70px;
+  }
+
+  .squirrel-mascot {
+    bottom: -4px;
+    left: -12px;
+  }
+}
+
+/* ===================================
+   EARLY YEARS SECTION
+   =================================== */
+
+.early-years-section {
+  background-color: #faf9f4;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.early-years-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Image Side (Left) */
+.early-years-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.early-years-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30px;
+  border: 1px solid #e5e0d0; /* Subtle border */
+  display: block;
+}
+
+/* Content Side (Right) */
+.early-years-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Arrow */
+.arrow-container {
+  position: absolute;
+  top: -60px;
+  left: -80px;
+  width: 100px;
+  height: 80px;
+  pointer-events: none;
+}
+
+.red-arrow-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-10deg);
+}
+
+/* Headings */
+.early-years-heading {
+  font-family: "Noto Serif", serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.early-years-text {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+/* Squirrel */
+.early-years-squirrel {
+  margin-top: 10px;
+}
+
+.mascot-img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* ===================================
+   EARLY YEARS RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .early-years-container {
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .early-years-heading {
+    font-size: 32px;
+  }
+
+  .arrow-container {
+    left: -40px;
+    top: -50px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .early-years-section {
+    padding: 60px 20px;
+  }
+
+  .early-years-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .early-years-image-wrapper {
+    order: 2; /* Image below content on mobile? Or above? standard is usually image top, but let's check design flow. Usually content top. I'll keep default order for now, which is Image Left (Top) -> Content Right (Bottom). */
+    width: 100%;
+    justify-content: center;
+    order: 1; /* Keep image on top */
+  }
+
+  .early-years-img {
+    max-width: 100%;
+  }
+
+  .early-years-content-wrapper {
+    order: 2;
+    align-items: center; /* Center align on mobile */
+    text-align: center;
+  }
+
+  .arrow-container {
+    display: none; /* Hide arrow on mobile as it might overlap weirdly */
+  }
+
+  .early-years-heading {
+    font-size: 28px;
+  }
+
+  .early-years-text {
+    font-size: 16px;
+  }
+}
+
+/* ===================================
+   FRAMEWORK SECTION
+   =================================== */
+
+.framework-section {
+  background-color: #faf9f4; /* Matching background */
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.framework-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.framework-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 60px;
+}
+
+.framework-title {
+  font-family: "Noto Serif", serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.framework-subtitle {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.5;
+}
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.framework-card {
+  background: white;
+  border: 1px solid #e0c097; /* Gold/Beige border */
+  border-radius: 30px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 180px; /* Fixed height for consistency */
+}
+
+.framework-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  /* If relying on emojis, no extra generic style needed, but we could add a bg circle if we wanted */
+}
+
+/* Specific icon styling if using emoji/text to make them pop more? */
+
+.card-title {
+  font-family: "Noto Serif", serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* ===================================
+   FRAMEWORK RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .framework-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .framework-section {
+    padding: 60px 20px;
+  }
+
+  .framework-title {
+    font-size: 32px;
+  }
+
+  .framework-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 500px; /* Limit width on mobile so cards aren't huge */
+  }
+
+  .framework-card {
+    height: auto;
+    min-height: 160px;
+  }
+}
+
+/* ===================================
+   PROGRAMMES SECTION
+   =================================== */
+
+.programmes-section {
+  background-color: #faf9f4; /* Matching background */
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.programmes-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.programmes-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 60px;
+}
+
+.programmes-title {
+  font-family: "Noto Serif", serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.programmes-description {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.5;
+}
+
+.programmes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+/* Card Wrapper for 3D effect context */
+.programme-card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The Main Card */
+.programme-card {
+  background: white;
+  border: 1px solid #d1d1d1;
+  border-bottom: none;
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  position: relative;
+  z-index: 2;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-radius: 30px;
+  border: 1px solid #e6e0d0;
+  margin-bottom: -30px;
+  background: #fff;
+}
+
+.programme-base {
+  height: 60px;
+  width: 100%;
+  border-radius: 0 0 30px 30px;
+  z-index: 1;
+}
+
+/* Content */
+.programme-content {
+  flex: 1;
+}
+
+.programme-title {
+  font-family: "Noto Serif", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.programme-age {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.programme-desc {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Image/Mascot */
+.programme-image-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.programme-mascot {
+  width: 120px;
+  height: auto;
+}
+
+/* ===================================
+   PROGRAMMES RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .programmes-grid {
+    gap: 30px;
+  }
+
+  .programme-card {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .programmes-section {
+    padding: 60px 20px;
+  }
+
+  .programmes-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px; /* Limit width */
+    margin: 0 auto;
+  }
+
+  .programmes-title {
+    font-size: 32px;
+  }
+
+  .programme-card {
+    min-height: auto;
+  }
+}
+
+/* ===================================
+   APPROACH SECTION
+   =================================== */
+
+.approach-section {
+  background-color: #faf9f4; /* Matching background */
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.approach-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Content Side (Left) */
+.approach-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.approach-heading {
+  font-family: "Noto Serif", serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.approach-subheading {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.approach-text {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.approach-keywords {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.keyword {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #c19a6b; /* Gold/Brown */
+}
+
+.separator {
+  color: #c19a6b;
+  font-weight: 300;
+}
+
+/* Visual Side (Right) */
+.approach-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.visual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 500px;
+  height: 350px;
+  border: 1px solid #c19a6b;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===================================
+   APPROACH RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .approach-container {
+    gap: 40px;
+  }
+
+  .visual-grid {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .approach-section {
+    padding: 60px 20px;
+  }
+
+  .approach-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .approach-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .approach-keywords {
+    justify-content: center;
+  }
+
+  .approach-visual {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .visual-grid {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    aspect-ratio: 500/350;
+  }
+
+  .approach-heading {
+    font-size: 28px;
+  }
+}
+
+/* ===================================
+   WHY CHOOSE SECTION
+   =================================== */
+
+.why-choose-section {
+  background-color: #faf9f4; /* Matching background */
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.why-choose-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-choose-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 60px;
+}
+
+.why-choose-title {
+  font-family: "Noto Serif", serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.why-choose-subtitle {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* Content Grid */
+.why-choose-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+
+.why-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.left-column {
+  align-items: flex-end; /* Align cards to the right (towards center) */
+}
+
+.right-column {
+  align-items: flex-start; /* Align cards to the left (towards center) */
+}
+
+.center-column {
+  flex: 1.2; /* Slightly wider */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cards */
+.why-card {
+  background-color: #f0f1e8; /* Light greenish/beige pill color */
+  border-radius: 50px; /* Pill shape */
+  padding: 20px 30px;
+  max-width: 320px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.why-card-text {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Arch Image */
+.arch-image-container {
+  width: 300px;
+  height: 500px;
+  border-radius: 150px 150px 100px 100px; /* Arch shape */
+  overflow: hidden;
+  border: 2px solid #c19a6b; /* Gold border */
+  position: relative;
+}
+
+.arch-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===================================
+   WHY CHOOSE RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .why-choose-content {
+    gap: 20px;
+  }
+
+  .arch-image-container {
+    width: 250px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-section {
+    padding: 60px 20px;
+  }
+
+  .why-choose-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .left-column,
+  .right-column {
+    align-items: center; /* Center stack on mobile */
+    order: 2; /* Move text below image or mix? Let's put image top or middle. Standard is top. */
+  }
+
+  .center-column {
+    order: 1; /* Image first */
+    margin-bottom: 20px;
+  }
+
+  .why-card {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 20px; /* Less pill-like on mobile maybe? Or keep it. */
+  }
+
+  .arch-image-container {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+  }
+
+  .why-choose-title {
+    font-size: 28px;
+  }
+}
+
+/* ===================================
+   FACILITIES & SAFETY SECTION
+   =================================== */
+
+.facilities-section {
+  background-color: #faf9f4; /* Matching background */
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.facilities-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.facilities-header {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 60px;
+}
+
+.facilities-title {
+  font-family: "Noto Serif", serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.facilities-subtitle {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.facility-card {
+  background: #fff;
+  border: 1px solid #c19a6b; /* Gold border */
+  border-radius: 30px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-height: 180px;
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+}
+
+.facility-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.facility-title {
+  font-family: "Noto Serif", serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===================================
+   FACILITIES RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .facilities-section {
+    padding: 60px 20px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+    max-width: 400px;
+  }
+
+  .facility-card {
+    min-height: auto;
+    padding: 25px 20px;
+  }
+
+  .facilities-title {
+    font-size: 28px;
+  }
+}
+
+/* ===================================
+   ADMISSIONS SECTION
+   =================================== */
+
+.admissions-section {
+  background-color: #faf9f4; /* Matching background */
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.admissions-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left Side: Info with Background */
+.admissions-left {
+  flex: 1.2;
+}
+
+.admissions-content-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  background: white; /* Fallback */
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Content at top */
+}
+
+.admissions-bg-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Image at bottom half */
+  object-fit: cover;
+  z-index: 0;
+}
+
+.admissions-overlay-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.admissions-title {
+  font-family: "Noto Serif", serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.admissions-subtitle {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Pill Cards inside Left Side */
+.admission-info-card {
+  background-color: #efeee5; /* Light beige/grey pill */
+  border: 1px solid #c19a6b; /* Thin gold border */
+  border-radius: 40px;
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.info-card-title {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.age-groups-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #333;
+  flex-wrap: wrap;
+}
+
+.divider {
+  color: #c19a6b;
+}
+
+.process-steps {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Right Side: Enquiry Form */
+.admissions-right {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.enquiry-form-container {
+  width: 100%;
+}
+
+.enquiry-title {
+  font-family: "Noto Serif", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 30px;
+  background-color: #efeee5; /* Light beige matching left cards */
+  border: 1px solid #c19a6b;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.form-textarea {
+  min-height: 120px;
+  border-radius: 20px;
+  resize: vertical;
+}
+
+.enquire-btn {
+  background-color: #0b2c4d; /* Dark Navy Blue */
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: opacity 0.3s;
+}
+
+.enquire-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===================================
+   ADMISSIONS RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .admissions-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .admissions-left,
+  .admissions-right {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .admissions-section {
+    padding: 60px 20px;
+  }
+
+  .admissions-title {
+    font-size: 28px;
+  }
+
+  .age-groups-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
